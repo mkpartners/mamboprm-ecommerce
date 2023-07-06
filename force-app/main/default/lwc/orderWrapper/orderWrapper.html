@@ -1,0 +1,42 @@
+<template>
+  <template if:true={loaded}>
+    <main>
+      <nav>
+        <img class="logo" alt="Mambo Merge" src={logoImg} tabindex="0" />
+      </nav>
+      <template lwc:if={showUserDetailsScreen}>
+        <c-sub-user-details
+          customer-email={customerEmail}
+          org-id={orgId}
+          onhandlescreenchange={handleScreenChange}
+        >
+        </c-sub-user-details>
+      </template>
+      <template lwc:elseif={showOrderDetailsScreen}>
+        <c-sub-order-details
+          customer-email={customerEmail}
+          org-id={orgId}
+          edition={edition}
+          quantity={quantity}
+          onhandlescreenchange={handleScreenChange}
+        ></c-sub-order-details>
+      </template>
+      <template lwc:elseif={showPaymentDetailsScreen}>
+        <c-sub-payment-details
+          customer-email={customerEmail}
+          org-id={orgId}
+          edition={edition}
+          quantity={quantity}
+          onhandlescreenchange={handleScreenChange}
+          onsubmitpaymentdetails={handleSubmitPaymentDetails}
+        ></c-sub-payment-details>
+      </template>
+      <template lwc:else>
+        <div>
+          An error occurred. Please contact the MamboMerge Sales Team for
+          assistance.
+        </div>
+      </template>
+    </main>
+  </template>
+</template>

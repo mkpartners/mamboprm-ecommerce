@@ -1,0 +1,46 @@
+<template>
+  <section class="form-container">
+    <form>
+      <ul>
+        <li>
+          <p class="order-summary-line">
+            <span>Email</span>
+            <span>{customerEmail}</span>
+          </p>
+        </li>
+        <li>
+          <p class="order-summary-line">
+            <span>Production Org Id</span>
+            <span>{orgId}</span>
+          </p>
+        </li>
+        <li>
+          <p class="order-summary-line">
+            <span>Edition</span>
+            <span>{edition}</span>
+          </p>
+        </li>
+        <li>
+          <p class="order-summary-line">
+            <span>Quantity</span>
+            <span>{quantity}</span>
+          </p>
+        </li>
+      </ul>
+
+      <div>######### Payment section here #########</div>
+
+      <div id="error" class="error" if:true={showError}>{errorMsg}</div>
+
+      <div class="form-column">
+        <button id="back" class="back-btn" onclick={backOrderDetails}>
+          &larr; Return to order
+        </button>
+
+        <button id="submit" class="mm-btn" onclick={submitPaymentDetails}>
+          Submit Order
+        </button>
+      </div>
+    </form>
+  </section>
+</template>

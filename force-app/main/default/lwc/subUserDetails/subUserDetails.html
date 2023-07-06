@@ -1,0 +1,45 @@
+<template>
+  <section class="form-container">
+    <form>
+      <div class="form-column">
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            data-id="email"
+            onkeyup={handleCustomerEmailChange}
+            onchange={handleCustomerEmailChange}
+            value={customerEmail}
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-column">
+        <div class="input-container">
+          <label for="orgId">Production Org Id</label>
+          <input
+            type="orgId"
+            id="orgId"
+            name="orgId"
+            data-id="orgId"
+            onkeyup={handleOrgIdChange}
+            onchange={handleOrgIdChange}
+            value={orgId}
+            required
+          />
+        </div>
+      </div>
+
+      <div id="error" class="error" if:true={showError}>{errorMsg}</div>
+
+      <div class="form-column column-flex-end">
+        <button id="submit" class="mm-btn" onclick={submitUserDetails}>
+          Next
+        </button>
+      </div>
+    </form>
+  </section>
+</template>

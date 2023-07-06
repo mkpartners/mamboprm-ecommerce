@@ -1,0 +1,206 @@
+.error {
+  color: red;
+}
+
+nav {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.form-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin: auto;
+}
+.form-container .contact-form-text {
+  font-size: 1rem;
+}
+.form-container form {
+  margin: 0;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (max-width: 480px) {
+  .form-container form {
+    max-width: 400px;
+  }
+}
+.form-container .form-column {
+  display: flex;
+  justify-content: space-between;
+}
+.form-container .form-column.column-flex-end {
+  justify-content: flex-end;
+}
+.form-container .form-column:last-child {
+  margin-top: 2rem;
+}
+@media (max-width: 480px) {
+  .form-container .form-column {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.form-container .contact-btn-container {
+  text-align: right;
+  margin-top: 1rem;
+}
+.form-container .form-button-container {
+  margin-top: 1rem;
+}
+.form-container .radio-btn-container {
+  display: flex;
+  flex: 1;
+  height: auto;
+  justify-content: center;
+}
+.form-container .radio-btn-container input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+.form-container .radio-btn-container input:checked + label {
+  background-color: #0b1649;
+  color: #fff;
+}
+.form-container .radio-btn-container label {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  color: #0b1649;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #0b1649;
+  transition: all 0.1s ease-in-out;
+}
+.form-container .radio-btn-container label:first-of-type {
+  border-radius: 8px 0 0 8px;
+}
+.form-container .radio-btn-container label:last-of-type {
+  border-radius: 0 8px 8px 0;
+}
+.form-container .input-container {
+  height: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.form-container .input-container.no-flex {
+  flex: none;
+}
+.form-container .input-container:focus-within label {
+  color: #134384;
+}
+.form-container .input-container.search-bar {
+  flex-direction: row;
+  text-indent: 100px;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #e6eef8;
+  transition: 0.2s;
+}
+.form-container .input-container.search-bar:focus-within {
+  background-color: #134384;
+}
+.form-container .input-container.search-bar:focus-within svg {
+  background-color: #fff;
+}
+.form-container .input-container:focus-within label {
+  color: #134384;
+}
+
+label {
+  height: auto;
+  font-size: 0.875rem;
+  padding: 0;
+  color: #5b5b5b;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #134384;
+  background-color: #fff;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 0.125rem;
+  background-color: #e6eef8;
+  border-color: #e6eef8;
+  font-family: dm sans, Arial, Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #134384;
+}
+input.search-bar-input,
+textarea.search-bar-input {
+  border-radius: 0 8px 8px 0;
+  left: -1px;
+}
+
+.back-btn {
+  border-style: none;
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: #0b1649;
+}
+
+.mm-btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.345rem;
+  min-width: 96px;
+  border-radius: 30px;
+  border: 1px solid #0b1649;
+  color: #fff;
+  background-color: #0b1649;
+  transition: 0.3s;
+  text-align: center;
+  box-sizing: border-box;
+}
+.mm-btn:hover {
+  background-color: #122375;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.order-summary-line {
+  display: flex;
+  justify-content: space-between;
+  color: #5b5b5b;
+  font-size: 0.875rem;
+}/*# sourceMappingURL=styles.css.map */

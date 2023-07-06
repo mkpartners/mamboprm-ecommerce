@@ -1,0 +1,57 @@
+<template>
+  <section class="form-container">
+    <form>
+      <div class="form-column">
+        <div class="radio-btn-container">
+          <input
+            type="radio"
+            id="radio-one"
+            name="edition"
+            value="standard"
+            data-id="standard"
+            onclick={handleEditionChange}
+          />
+          <label for="radio-one">Standard</label>
+          <input
+            type="radio"
+            id="radio-two"
+            name="edition"
+            value="professional"
+            data-id="professional"
+            onclick={handleEditionChange}
+          />
+          <label for="radio-two">Professional</label>
+        </div>
+      </div>
+
+      <div class="form-column">
+        <div class="input-container no-flex">
+          <label for="quantity">Quantity</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            data-id="quantity"
+            onkeyup={handleQuantityChange}
+            onchange={handleQuantityChange}
+            value={quantity}
+            min="0"
+            required
+          />
+        </div>
+      </div>
+
+      <div id="error" class="error" if:true={showError}>{errorMsg}</div>
+
+      <div class="form-column">
+        <button id="back" class="back-btn" onclick={backUserDetails}>
+          &larr; Return to information
+        </button>
+
+        <button id="submit" class="mm-btn" onclick={submitOrderDetails}>
+          Continue to Payment
+        </button>
+      </div>
+    </form>
+  </section>
+</template>
